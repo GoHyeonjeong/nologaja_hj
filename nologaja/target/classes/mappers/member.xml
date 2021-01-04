@@ -63,6 +63,16 @@
 		]]>
 	</select>
 	
+	
+	<select id="bduplicateEmail" resultType="int" parameterType="String">
+		<![CDATA[
+		SELECT COUNT(*)
+		FROM user_buyer
+		WHERE uemail = #{uemail}
+		]]>
+	</select>
+	
+	
 	<select id="blogin" resultType="int" parameterType="HashMap">
 		<![CDATA[
 			SELECT COUNT(*)
@@ -70,6 +80,7 @@
 			WHERE uid=#{one} AND upw=#{two}
 		]]>
 	</select>
+		
 		
 	<select id="read_bgrd" resultType="String" parameterType="HashMap">
 		<![CDATA[
