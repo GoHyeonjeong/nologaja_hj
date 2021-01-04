@@ -22,8 +22,8 @@
 
 	<insert id="binsert" parameterType="kr.co.nologaja.member.BuyerDTO">
 		<![CDATA[
-		INSERT INTO user_buyer (uid, upw, uemail, uname, upnb, ugender, wdate)
-		VALUES (#{uid}, #{upw}, #{uemail}, #{uname}, #{upnb}, #{ugender}, sysdate())
+		INSERT INTO user_buyer (uid, upw, uemail, uname, upnb, ugender)
+		VALUES (#{uid}, #{upw}, #{uemail}, #{uname}, #{upnb}, #{ugender})
 		]]>
 	</insert>
 	
@@ -35,7 +35,6 @@
 		WHERE uid = #{uid}
 		]]>
 	</update>
-	
 	
 	
 	<delete id="bdelete" parameterType="String">
@@ -114,8 +113,8 @@
 
 	<insert id="sinsert" parameterType="kr.co.nologaja.member.SellerDTO">
 		<![CDATA[
-		INSERT INTO user_seller (suid, supw, uemail, uname, upnb, bsnb, bsaddr1, bsaddr2, bspnb, wdate)
-		VALUES (#{suid}, #{supw}, #{uemail}, #{uname}, #{upnb}, #{bsnb}, #{bsaddr1}, #{bsaddr2}, #{bspnb}, sysdate())
+		INSERT INTO user_seller (suid, supw, uemail, uname, upnb, bsnb, bsaddr1, bsaddr2, bspnb)
+		VALUES (#{suid}, #{supw}, #{uemail}, #{uname}, #{upnb}, #{bsnb}, #{bsaddr1}, #{bsaddr2}, #{bspnb})
 		]]>
 	</insert>
 	

@@ -64,7 +64,7 @@
                                    	</c:when>
                                
                                     <c:otherwise>
-                                    <c:choose>  
+                                    <c:choose>
                                     	<c:when test="${sessionScope.uid != null}">
                                     	<li class="nav-item">
                                     		<span>${sessionScope.uid }님이 로그인 중 입니다.</span>

@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
-    <!-- 메인내용 -->
+    <!-- 메인내용123 -->
 	<div class="mj_wrap">
             <div class="mj_form-wrap">
             <!-- 일반회원 -->
