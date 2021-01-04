@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<footer class="footer-area" style="padding-top: 60px;">
+<!-- footer -->
+    <footer class="footer-area" style="padding-top: 60px;">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4">
@@ -30,6 +31,10 @@
                     <div class="single-footer-widget footer_icon">
                         <h4>Contact Us</h4>
                         <p>강문수<br>
+                            고현정<br>
+                           유수현<br>
+                           이성용<br>
+                           조유민<br>
                                </p>
                         <span>contact@martine.com</span>
                     </div>
@@ -51,27 +56,30 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- footer part end-->
 
     <!-- jquery plugins here-->
-    <script src="./resources/js/jquery-1.12.1.min.js"></script>
+    <script src="resources/js/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
-    <script src="./resources/js/popper.min.js"></script>
+    <script src="resources/js/popper.min.js"></script>
     <!-- bootstrap js -->
-    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
     <!-- magnific js -->
-    <script src="./resources/js/jquery.magnific-popup.js"></script>
+    <script src="resources/js/jquery.magnific-popup.js"></script>
     <!-- swiper js -->
-    <script src="./resources/js/owl.carousel.min.js"></script>
+    <script src="resources/js/owl.carousel.min.js"></script>
     <!-- masonry js -->
-    <script src="./resources/js/masonry.pkgd.js"></script>
+    <script src="resources/js/masonry.pkgd.js"></script>
     <!-- masonry js -->
-    <script src="./resources/js/jquery.nice-select.min.js"></script>
-    <script src="./resources/js/gijgo.min.js"></script>
+    <script src="resources/js/jquery.nice-select.min.js"></script>
+    <script src="resources/js/gijgo.min.js"></script>
     <!-- contact js -->
-    <script src="./resources/js/jquery.ajaxchimp.min.js"></script>
-    <script src="./resources/js/jquery.form.js"></script>
-    <script src="./resources/js/jquery.validate.min.js"></script>
-    <script src="./resources/js/mail-script.js"></script>
-    <script src="./resources/js/contact.js"></script>
+    <script src="resources/js/myscript.js"></script>
+    
+    <script src="resources/js/jquery.ajaxchimp.min.js"></script>
+    <script src="resources/js/jquery.form.js"></script>
+    <script src="resources/js/jquery.validate.min.js"></script>
+    <script src="resources/js/mail-script.js"></script>
+    <script src="resources/js/contact.js"></script>
     <!-- custom js -->
-    <script src="./resources/js/custom.js"></script>
+    <script src="resources/js/custom.js"></script>
+    <script src="resources/js/jquery.cookie.js"></script>
 </body>
 </html>
