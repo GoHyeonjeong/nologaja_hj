@@ -1,10 +1,14 @@
 package kr.co.nologaja.member;
 
+import java.io.PrintWriter;
+
 import javax.inject.Inject;
 import javax.management.BadBinaryOpValueExpException;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.json.simple.JSONObject;
 import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;
@@ -51,6 +55,48 @@ public class MemberCont {
 		bdao.insert(dto);
 		return "member/login";
 	}// insert() end
+	
+	//구매자 아이디 체크
+	@RequestMapping("/buyerProc.do")
+	public void buyerCheckProc(HttpServletRequest req, HttpServletResponse resp) {
+		try {
+			String uid=req.getParameter("uid");
+			int cnt=bdao.duplecateID(uid);
+			
+			JSONObject json=new JSONObject();
+			//key.put(key, value)
+			json.put("count", cnt);
+			resp.setContentType("text/plain; charset=UTF-8");
+			PrintWriter out=resp.getWriter();
+			out.println(json.toString());
+			out.flush();
+			out.close();
+			
+		}catch (Exception e) {
+			System.out.println("아이디 중복확인 쿠키 실패:"+e);
+		}//end
+	}//buyerProc() end
+	
+	//구매자 이메일 체크
+	@RequestMapping("/buyerEmailProc.do")
+	public void buyerEmailCheckProc(HttpServletRequest req, HttpServletResponse resp) {
+		try {
+			String uemail=req.getParameter("uemail");
+			int cnt=bdao.duplecateEmail(uemail);
+			
+			JSONObject json=new JSONObject();
+			//key.put(key, value)
+			json.put("count", cnt);
+			resp.setContentType("text/plain; charset=UTF-8");
+			PrintWriter out=resp.getWriter();
+			out.println(json.toString());
+			out.flush();
+			out.close();
+			
+		}catch (Exception e) {
+			System.out.println("이메일 중복확인 쿠키 실패:"+e);
+		}//end
+	}//buyerEmailCheckProc() end
 
 	// 회원가입 판매자 dto
 	@RequestMapping("/sellerjoin.do")

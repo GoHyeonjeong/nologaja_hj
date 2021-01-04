@@ -10,24 +10,47 @@
                     <button type="button" class="mj_togglebtn" onclick="buyer()">일반회원</button>
                     <button type="button" class="mj_togglebtn" onclick="seller()">판매회원</button>
                 </div>
-                <form id="mj_buyer" action="buyerjoin.do" class="mj_input-group">
-                    <input type="text" class="mj_input-field" name="uid" id="uid" placeholder="Enter ID" required>
-                    <input type="button" class="mj_input-field" onclick="" value="ID 중복확인"><br>
-                    <input type="password" class="mj_input-field" name="upw" id="upw" placeholder="Enter Password" required>
-                    <input type="password" class="mj_input-field" name="reupw" id="reupw" placeholder="Check Password" required>
+                <form name="mj_buyer" id="mj_buyer" method="post" action="buyerjoin.do" class="mj_input-group" onsubmit="return b_send()">
+                    <div>
+                    	<input type="text" class="mj_input-field" name="uid" id="uid" placeholder="Enter ID" required>
+                    	<input type="button" class="mj_input-field" value="ID중복확인" id="btn_uid"><br>
+                    	<div id="panel_uid"></div> <!-- 아이디 중복 관련 메세지 -->
+                    </div>
+                    <div>
+                    	<input type="password" class="mj_input-field" name="upw" id="upw" placeholder="Enter Password" required>
+                    	<input type="password" class="mj_input-field" name="reupw" id="reupw" placeholder="Check Password" required>
+                    	<div class="alert alert-success" id="alert-success">비밀번호가 일치합니다</div>
+                    	<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다</div>
+                    </div>
                     <input type="text" class="mj_input-field" name="uname" id="uname" placeholder="Enter Name" required>
-                    <input type="email" class="mj_input-field" name="uemail" id="uemail" placeholder="Enter Email" required>
+                    <div>
+                    	<input type="email" class="mj_input-field" name="uemail" id="uemail" placeholder="Enter Email" required>
+                    	<input type="button" class="mj_input-field" value="Email중복확인" id="btn_uemail"><br>
+                    	<div id="panel_uemail"></div> <!-- 아이디 중복 관련 메세지 -->
+                    </div>
                     <input type="text" class="mj_input-field" name="upnb" id="upnb" placeholder="Enter PhoneNumber" required>
-                    <input type="radio" name="ugender" id="ugender" value="M">남자
+                    <input type="radio" name="ugender" id="ugender" value="M" checked>남자
                     <input type="radio" name="ugender" id="ugender" value="F">여자
                     <button class="mj_submit">회원가입</button>
                 </form>
-                <form id="mj_seller" action="sellerjoin.do" class="mj_input-group">
-                    <input type="text" class="mj_input-field" name="suid" placeholder="Enter ID" required>
-                    <input type="password" class="mj_input-field" name="supw" placeholder="Enter Password" required>
-                    <input type="password" class="mj_input-field" name="sreupw" placeholder="Check Password" required>
-                    <input type="email" class="mj_input-field" name="uname" placeholder="Enter Email" required>
-                    <input type="text" class="mj_input-field" name="uemail" placeholder="Enter Name" required>
+                <form name="mj_seller" id="mj_seller" method="post" action="sellerjoin.do" class="mj_input-group" onsubmit="return s_send()">
+                	<div>
+                    	<input type="text" class="mj_input-field" name="suid" placeholder="Enter ID" required>
+                    	<input type="button" class="mj_input-field" value="ID중복확인" id="btn_suid"><br>
+                    	<div id="panel_suid"></div> <!-- 아이디 중복 관련 메세지 -->
+                    </div>
+                    <div>
+                    	<input type="password" class="mj_input-field" name="supw" placeholder="Enter Password" required>
+                    	<input type="password" class="mj_input-field" name="sreupw" placeholder="Check Password" required>
+                    	<div class="alert alert-success" id="alert-success">비밀번호가 일치합니다</div>
+                    	<div class="alert alert-danger" id="alert-danger">비밀번호가 일치하지 않습니다</div>
+                    </div>
+	                    <input type="email" class="mj_input-field" name="uemail" placeholder="Enter Email" required>
+	                    <input type="button" class="mj_input-field" value="Email중복확인" id="btn_uemail"><br>
+                    	<div id="panel_uemail"></div> <!-- 아이디 중복 관련 메세지 -->
+                    <div>
+                    	<input type="text" class="mj_input-field" name="uname" placeholder="Enter Name" required>
+                    </div>
                     <input type="text" class="mj_input-field" name="bspnb" placeholder="Enter PhoneNumber" required>
                     <input type="text" class="mj_input-field" id="sample6_postcode"name="zipcode" placeholder="zipcode">
 					<input type="text" class="mj_input-field" id="sample6_address" name="bsaddr1" placeholder="Enter Address">

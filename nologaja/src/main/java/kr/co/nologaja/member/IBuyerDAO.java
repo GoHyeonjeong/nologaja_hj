@@ -14,6 +14,7 @@ public interface IBuyerDAO {
     public void update(BuyerDTO dto);
     public boolean checkpasswd(String uid, String upw);
     public int duplecateID(String uid);
+    public int duplecateEmail(String uemail);
 	public boolean blogin(String uid , String upw);
 	String read_bgrd(String uid, String upw);
 	BuyerDTO bfindid(BuyerDTO dto);

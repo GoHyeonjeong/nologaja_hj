@@ -71,6 +71,12 @@ public class BuyerDAO implements IBuyerDAO{
 		return count;
 	}
 	
+	@Override
+	public int duplecateEmail(String uemail) {
+		int count = sqlSession.selectOne("member.bduplicateEmail", uemail);
+		return count;
+	}
+	
 	//로그인
 	@Override
 	public boolean blogin(String uid, String upw) {

@@ -12,7 +12,7 @@
 }
 .mj_form-wrap {
     width: 380px;
-    height: 750px;
+    height: 1000px;
     position: relative;
     margin: 4% auto;
     background: #fff;
@@ -83,7 +83,7 @@
 .mj_checkbox {
     margin: 30px 10px 30px 0;
 }
-.mj_wrap .mj_form-wrap span {
+.mj_wrap span {
     color: #777;
     font-size: 12px;
     bottom: 68px;
