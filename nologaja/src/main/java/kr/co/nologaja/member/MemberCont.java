@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import jdk.jfr.MetadataDefinition;
 import kr.co.nologaja.member.BuyerDTO;
 import net.utility.mail;
 
